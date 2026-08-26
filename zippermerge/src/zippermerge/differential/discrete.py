@@ -9,12 +9,13 @@ def diff(t, x):
     Returns:
     list: The computed discrete derivative v(t) as a Python array.
     """
+    
     # Check for equality of lengths of input arrays
     if len(t) != len(x):
         raise ValueError("The time array (t) and signal array (x) must be of equal length.")
     
     v = []
-    # Iterate through arrays starting from second element (index 1)
+    # Iterate through arrays starting from second element
     for k in range(1, len(t)):
         # Calculate difference between consecutive signal values
         delta_x = x[k] - x[k-1]
